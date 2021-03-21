@@ -9,7 +9,7 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            <div>
+            <div class="mt-4">
                 <x-jet-label for="name" value="{{ __('Name') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
@@ -17,6 +17,16 @@
             <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="affiliation_id" value="{{ __('affiliation') }}" />
+                {{Form::select('affiliation_id', ['東京支社', '大阪支社', '神奈川支社', '静岡支社', '岐阜支社', '大分本社', '熊本支社', '沖縄支社'], ['class' => 'block mt-1 w-full', 'id'=>'affiliation_id'], ['placeholder' => '選択してください'])}}
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="department_name_id" value="{{ __('department') }}" />
+                {{Form::select('department_name_id', ['総務部', '人事部', '経理部', '営業部', '開発部', '事業部', '製造部'], ['class' => 'block mt-1 w-full', 'id'=>'department_name_id'], ['placeholder' => '選択してください'])}}
             </div>
 
             <div class="mt-4">
