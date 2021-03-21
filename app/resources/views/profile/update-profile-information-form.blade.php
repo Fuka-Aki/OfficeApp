@@ -65,6 +65,18 @@
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
         </div>
+
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="affiliation_id" value="{{ __('affiliation') }}" />
+            {{Form::select('affiliation_id', ['東京支社', '大阪支社', '神奈川支社', '静岡支社', '岐阜支社', '大分本社', '熊本支社', '沖縄支社'], ['class' => 'block mt-1 w-full', 'id'=>'affiliation_id', 'wire:model.defer' => 'state.affiliation_id'], ['placeholder' => '選択してください'])}}
+            <x-jet-input-error for="affiliation_id" class="mt-2" />
+        </div>
+
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="department_name_id" value="{{ __('department') }}" />
+            {{Form::select('department_name_id', ['総務部', '人事部', '経理部', '営業部', '開発部', '事業部', '製造部'], ['class' => 'block mt-1 w-full', 'id'=>'department_name_id'], ['placeholder' => '選択してください'])}}
+            <x-jet-input-error for="department_name_id" class="mt-2" />
+        </div>
     </x-slot>
 
     <x-slot name="actions">
