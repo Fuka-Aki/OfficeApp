@@ -1,6 +1,6 @@
 # アプリケーション名
 
-groupOffice
+OfficeApp
 =======
 
 <img width="1160" alt="README" src="https://user-images.githubusercontent.com/75027499/107139750-e7b35a80-6960-11eb-95e4-d99fd7d00b75.png">
